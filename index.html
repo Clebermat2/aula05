@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Moderno de Word para Concursos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+        }
+        .hero-bg {
+            background-color: #1a2942;
+            background-image: linear-gradient(135deg, #1a2942 0%, #2c3e50 100%);
+        }
+        .nav-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            transition: all 0.3s ease-in-out;
+            transform: translateY(-100%);
+        }
+        .nav-header.visible {
+            transform: translateY(0);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #38bdf8;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #back-to-top {
+            transition: opacity 0.3s, transform 0.3s;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white min-h-screen flex flex-col justify-center items-center text-center p-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4" style="font-family: 'Source Sans Pro', sans-serif;">Domine o Word para o seu Concurso</h1>
+        <p class="text-lg md:text-xl max-w-3xl mb-8 text-gray-300">Um guia completo e interativo com tudo que você precisa saber para gabaritar as questões de Microsoft Word.</p>
+        <a href="#fundamentos" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105">
+            Começar a Estudar
+        </a>
+    </section>
+
+    <!-- Sticky Navigation -->
+    <header id="main-nav" class="nav-header bg-white/80 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h2 class="text-lg font-bold text-gray-800" style="font-family: 'Source Sans Pro', sans-serif;">Guia de Word</h2>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#fundamentos" class="nav-link text-gray-600 font-semibold">Fundamentos</a>
+                <a href="#edicao" class="nav-link text-gray-600 font-semibold">Edição e Formatação</a>
+                <a href="#recursos" class="nav-link text-gray-600 font-semibold">Recursos Avançados</a>
+                <a href="#atalhos" class="nav-link text-gray-600 font-semibold">Guia de Atalhos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        
+        <!-- Fundamentos Section -->
+        <section id="fundamentos" class="mb-24">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold mb-2" style="font-family: 'Source Sans Pro', sans-serif;">Fundamentos Essenciais</h2>
+                <p class="text-lg text-gray-600">A base para você construir seu conhecimento.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <h3 class="font-bold text-xl mb-3">O que é o Word?</h3>
+                    <p>Um <strong>editor de textos</strong> da Microsoft para criar, editar e formatar documentos. A extensão padrão dos arquivos é <strong>.docx</strong>.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <h3 class="font-bold text-xl mb-3">A Interface</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Faixa de Opções:</strong> Área principal de comandos.</li>
+                        <li><strong>Guias:</strong> Agrupam funcionalidades (Página Inicial, Inserir).</li>
+                        <li><strong>Grupos:</strong> Subdivisões das guias (Fonte, Parágrafo).</li>
+                        <li>Atalho: <code class="bg-gray-200 px-2 py-1 rounded">CTRL+F1</code> oculta/mostra.</li>
+                    </ul>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <h3 class="font-bold text-xl mb-3">Gerenciamento de Arquivos</h3>
+                    <p>Use a guia <strong>Arquivo</strong> (modo Backstage) para ações como Salvar, Abrir (<code class="bg-gray-200 px-2 py-1 rounded">CTRL+O</code>), Imprimir (<code class="bg-gray-200 px-2 py-1 rounded">CTRL+P</code>) e Salvar Como (<code class="bg-gray-200 px-2 py-1 rounded">F12</code>).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Edição e Formatação Section -->
+        <section id="edicao" class="mb-24">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold mb-2" style="font-family: 'Source Sans Pro', sans-serif;">Edição e Formatação</h2>
+                <p class="text-lg text-gray-600">Comandos para manipular e estilizar seu texto.</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-4">Manipulação de Texto</h3>
+                    <div class="space-y-4">
+                        <div class="card bg-white p-4 rounded-lg shadow-sm"><strong>Copiar (<code class="bg-gray-200 px-2 py-1 rounded">CTRL+C</code>):</strong> Duplica o texto selecionado.</div>
+                        <div class="card bg-white p-4 rounded-lg shadow-sm"><strong>Recortar (<code class="bg-gray-200 px-2 py-1 rounded">CTRL+X</code>):</strong> Move o texto selecionado.</div>
+                        <div class="card bg-white p-4 rounded-lg shadow-sm"><strong>Colar (<code class="bg-gray-200 px-2 py-1 rounded">CTRL+V</code>):</strong> Insere o texto da área de transferência.</div>
+                        <div class="card bg-white p-4 rounded-lg shadow-sm"><strong>Pincel de Formatação (<code class="bg-gray-200 px-2 py-1 rounded">CTRL+SHIFT+C/V</code>):</strong> Copia e cola apenas a formatação.</div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-4">Formatação de Fonte</h3>
+                    <div class="space-y-4">
+                        <div class="card bg-white p-4 rounded-lg shadow-sm"><strong>Negrito:</strong> <code class="bg-gray-200 px-2 py-1 rounded">CTRL+N</code></div>
+                        <div class="card bg-white p-4 rounded-lg shadow-sm"><strong>Itálico:</strong> <code class="bg-gray-200 px-2 py-1 rounded">CTRL+I</code></div>
+                        <div class="card bg-white p-4 rounded-lg shadow-sm"><strong>Sublinhado:</strong> <code class="bg-gray-200 px-2 py-1 rounded">CTRL+S</code></div>
+                        <div class="card bg-white p-4 rounded-lg shadow-sm"><strong>Limpar Formatação:</strong> <code class="bg-gray-200 px-2 py-1 rounded">CTRL+ESPAÇO</code></div>
+                    </div>
+                </div>
+                <div class="fade-in lg:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4 mt-8">Alinhamento de Parágrafo</h3>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+                        <div class="card bg-white p-4 rounded-lg shadow-sm"><strong>Esquerda</strong><br><code class="bg-gray-200 px-2 py-1 rounded">CTRL+Q</code></div>
+                        <div class="card bg-white p-4 rounded-lg shadow-sm"><strong>Centralizar</strong><br><code class="bg-gray-200 px-2 py-1 rounded">CTRL+E</code></div>
+                        <div class="card bg-white p-4 rounded-lg shadow-sm"><strong>Direita</strong><br><code class="bg-gray-200 px-2 py-1 rounded">CTRL+G</code></div>
+                        <div class="card bg-white p-4 rounded-lg shadow-sm"><strong>Justificar</strong><br><code class="bg-gray-200 px-2 py-1 rounded">CTRL+J</code></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recursos Avançados Section -->
+        <section id="recursos" class="mb-24">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold mb-2" style="font-family: 'Source Sans Pro', sans-serif;">Recursos Avançados</h2>
+                <p class="text-lg text-gray-600">Funcionalidades poderosas para documentos complexos.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <h3 class="font-bold text-xl mb-3">Guia Inserir</h3>
+                    <p>Adicione tabelas, imagens, gráficos, cabeçalhos, rodapés e quebras de página (<code class="bg-gray-200 px-2 py-1 rounded">CTRL+ENTER</code>).</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <h3 class="font-bold text-xl mb-3">Guia Layout</h3>
+                    <p>Configure margens, orientação (retrato/paisagem), tamanho do papel e divida o texto em colunas.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <h3 class="font-bold text-xl mb-3">Guia Revisão</h3>
+                    <p>Verifique a ortografia (<code class="bg-gray-200 px-2 py-1 rounded">F7</code>), use o dicionário de sinônimos (<code class="bg-gray-200 px-2 py-1 rounded">SHIFT+F7</code>) e conte as palavras do seu texto.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <h3 class="font-bold text-xl mb-3">Tabelas</h3>
+                    <p>Ao criar uma tabela, novas guias contextuais ("Design da Tabela" e "Layout") aparecem para formatação avançada.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <h3 class="font-bold text-xl mb-3">Estilos</h3>
+                    <p>Conjuntos de formatação pré-definidos que garantem consistência visual. Modificar um estilo atualiza todo o documento.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-md fade-in">
+                    <h3 class="font-bold text-xl mb-3">Localizar e Substituir</h3>
+                    <p>Encontre textos com <code class="bg-gray-200 px-2 py-1 rounded">CTRL+L</code> e substitua com <code class="bg-gray-200 px-2 py-1 rounded">CTRL+U</code> (no doc. original).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guia de Atalhos Section -->
+        <section id="atalhos" class="mb-16">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold mb-2" style="font-family: 'Source Sans Pro', sans-serif;">Guia Rápido de Atalhos</h2>
+                <p class="text-lg text-gray-600">Use a busca para encontrar o atalho que precisa em segundos.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl fade-in">
+                <input type="text" id="searchInput" placeholder="🔎 Digite para buscar uma função ou atalho..." class="w-full p-3 mb-6 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left" id="shortcutsTable">
+                        <thead class="border-b-2 border-gray-200">
+                            <tr>
+                                <th class="p-3 font-semibold">Função</th>
+                                <th class="p-3 font-semibold">Atalho (Padrão Universal)</th>
+                                <th class="p-3 font-semibold">Atalho (Doc. Original)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rows will be populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-center py-8 text-gray-500">
+        <p>Criado para otimizar seus estudos. Boa sorte!</p>
+    </footer>
+
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-sky-500 text-white p-3 rounded-full shadow-lg opacity-0 transform -translate-y-4 hover:bg-sky-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const shortcuts = [
+                { func: 'Novo Documento', universal: 'CTRL + N', original: 'CTRL + O' },
+                { func: 'Abrir Documento', universal: 'CTRL + O', original: 'CTRL + A' },
+                { func: 'Salvar', universal: 'CTRL + S', original: 'CTRL + B' },
+                { func: 'Salvar Como', universal: 'F12', original: 'F12' },
+                { func: 'Imprimir', universal: 'CTRL + P', original: 'CTRL + P' },
+                { func: 'Fechar Documento', universal: 'CTRL + W', original: 'CTRL + F4' },
+                { func: 'Selecionar Tudo', universal: 'CTRL + A', original: 'CTRL + T' },
+                { func: 'Copiar', universal: 'CTRL + C', original: 'CTRL + C' },
+                { func: 'Recortar', universal: 'CTRL + X', original: 'CTRL + X' },
+                { func: 'Colar', universal: 'CTRL + V', original: 'CTRL + V' },
+                { func: 'Desfazer', universal: 'CTRL + Z', original: 'CTRL + Z' },
+                { func: 'Refazer', universal: 'CTRL + Y', original: 'CTRL + R' },
+                { func: 'Negrito', universal: 'CTRL + N', original: 'CTRL + N' },
+                { func: 'Itálico', universal: 'CTRL + I', original: 'CTRL + I' },
+                { func: 'Sublinhado', universal: 'CTRL + S', original: 'CTRL + S' },
+                { func: 'Alinhar à Esquerda', universal: 'CTRL + Q', original: 'CTRL + Q' },
+                { func: 'Centralizar', universal: 'CTRL + E', original: 'CTRL + E' },
+                { func: 'Alinhar à Direita', universal: 'CTRL + G', original: 'CTRL + G' },
+                { func: 'Justificar', universal: 'CTRL + J', original: 'CTRL + J' },
+                { func: 'Localizar', universal: 'CTRL + F', original: 'CTRL + L' },
+                { func: 'Substituir', universal: 'CTRL + H', original: 'CTRL + U' },
+                { func: 'Verificar Ortografia', universal: 'F7', original: 'F7' },
+                { func: 'Quebra de Página', universal: 'CTRL + ENTER', original: 'CTRL + ENTER' }
+            ];
+
+            const tableBody = document.querySelector('#shortcutsTable tbody');
+            const searchInput = document.getElementById('searchInput');
+
+            function populateTable(data) {
+                tableBody.innerHTML = '';
+                data.forEach(item => {
+                    const row = `
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="p-3 font-medium">${item.func}</td>
+                            <td class="p-3"><code class="bg-gray-200 px-2 py-1 rounded">${item.universal}</code></td>
+                            <td class="p-3"><code class="bg-gray-200 px-2 py-1 rounded">${item.original}</code></td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                });
+            }
+
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                const filteredData = shortcuts.filter(item => 
+                    item.func.toLowerCase().includes(searchTerm) ||
+                    item.universal.toLowerCase().includes(searchTerm) ||
+                    item.original.toLowerCase().includes(searchTerm)
+                );
+                populateTable(filteredData);
+            });
+
+            populateTable(shortcuts);
+
+            // Sticky Nav
+            const nav = document.getElementById('main-nav');
+            const heroSection = document.querySelector('.hero-bg');
+            const navObserver = new IntersectionObserver((entries) => {
+                if (!entries[0].isIntersecting) {
+                    nav.classList.add('visible');
+                } else {
+                    nav.classList.remove('visible');
+                }
+            }, { threshold: 0.1 });
+            navObserver.observe(heroSection);
+
+            // Active Nav Link on Scroll
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                        });
+                    }
+                });
+            }, { rootMargin: '-50% 0px -50% 0px' });
+            sections.forEach(section => sectionObserver.observe(section));
+
+            // Fade-in animations
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+            fadeElements.forEach(el => fadeObserver.observe(el));
+
+            // Back to Top Button
+            const backToTopButton = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', '-translate-y-4');
+                } else {
+                    backToTopButton.classList.add('opacity-0', '-translate-y-4');
+                }
+            });
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
